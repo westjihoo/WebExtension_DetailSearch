@@ -1,0 +1,48 @@
+{
+    "name": "AdvanSearch",
+    "description": "A nice little demo extension.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+        "tabs",
+        "declarativeContent"
+    ],
+    "action": {
+        "default_title": "AdvanSearch",
+        "default_popup": "/popup/popup.html",
+        "default_icon": {
+            "16": "/images/icon_cal_16.png",
+            "32": "/images/icon_cal_32.png",
+            "48": "/images/icon_cal_48.png"
+        }
+    },
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "windows": "Ctrl+Shift+Y",
+                "mac": "Command+Shift+Y",
+                "chromeos": "Ctrl+Shift+U",
+                "linux": "Ctrl+Shift+J"
+            }
+        }
+    },
+    "icons": {
+        "16": "/images/icon_cal_16.png",
+        "48": "/images/icon_cal_48.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": [
+                "/scripts/content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "background": {
+        "service_worker": "/background.js"
+    }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible">
+    <title>My Search Extension</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">Search on NAVER</div>
+
+      <div class="input-group">
+        <input type="text" id="keyword_base">
+      </div>
+
+      <div class="input-group">
+        <label for="keyword">포함</label>
+        <input type="text" id="keyword_plus" placeholder="가,나,다">
+      </div>
+
+      <div class="input-group">
+        <label for="keyword">제외</label>
+        <input type="text" id="keyword_minus" placeholder="가,나,다">
+      </div>
+
+      <div class="input-group">
+        <label for="keyword">정확히 일치</label>
+        <input type="text" id="keyword_exact" placeholder="가,나,다">
+      </div>
+
+      <div class="input-group">
+        <label for="keyword">다중 검색</label>
+        <input type="text" id="keyword_or" placeholder="가,나,다">
+      </div>
+
+      <div class="btn-c">
+        <button id="btn_search">Search</button>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
